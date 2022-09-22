@@ -26,7 +26,11 @@ function Header(){
 				<MenuOutlinedIcon className={styles.CustomMenu} onClick={()=>setburgerStatus(true)}/>
 			</div>
 
-			<div className={styles.BurgerNav} show = {burgerStatus}>
+			<div 
+				className={styles.BurgerNav} 
+				show = {burgerStatus} 
+				style={burgerStatus ? {transform: 'translateX(0%)'} : {transform: 'translateX(100%)'}}
+			>
 				<div className={styles.CloseWrapper}>
 					<CloseOutlinedIcon className={styles.CustomClose} onClick={()=>setburgerStatus(false)} />
 				</div>
